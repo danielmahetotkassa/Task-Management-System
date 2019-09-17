@@ -1,6 +1,8 @@
-# task-management-system
+# task-management system
+
 ![image](https://user-images.githubusercontent.com/16411579/65078103-5063f680-d96a-11e9-9729-c7f7d10d55cd.png)
 
+# The first Step is creating the employees in which the task is assigned
 ![image](https://user-images.githubusercontent.com/16411579/65078162-7c7f7780-d96a-11e9-90a9-8a45f160225d.png)
 
 ![image](https://user-images.githubusercontent.com/16411579/65078172-84d7b280-d96a-11e9-9fd2-03d780755472.png)
