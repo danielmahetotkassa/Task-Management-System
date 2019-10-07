@@ -47,6 +47,11 @@ public class ToDoController {
 	@Autowired
 	EmailService emailService;
 	
+	@RequestMapping("/")
+	@ResponseBody
+	public String getValues() {
+	     return "hello World";
+	}
 	
 	@RequestMapping("/nanan")
 	public String getHomePage(Model model) {
