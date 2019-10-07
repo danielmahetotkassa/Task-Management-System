@@ -49,26 +49,26 @@ public class ToDoController {
 	
 	
 	@RequestMapping("/")
-	public String getHomePage() {
+	public String getHomePage(Model model) {
 		
 		// Finding the working directory of java
 		
 		// System.out.println(Paths.get("").toAbsolutePath().toString());
 		
-	//	Period intervalPeriod;
+		Period intervalPeriod;
 		
-	//	List<Task> tasks = taskDao.findAll();
+		List<Task> tasks = taskDao.findAll();
 		
 		
-		//Map<Period, Task> duration = new HashMap<>();
+		Map<Period, Task> duration = new HashMap<>();
 		
-		//for(Task t : tasks) {
-	//		intervalPeriod = Period.between(t.getDue_date(), LocalDate.now());
-	//		duration.put(intervalPeriod, t);
+		for(Task t : tasks) {
+			intervalPeriod = Period.between(t.getDue_date(), LocalDate.now());
+		duration.put(intervalPeriod, t);
 			
 		}
-	//	
-		//model.addAttribute("tasks",duration);
+		
+		model.addAttribute("tasks",duration);
 		return "main";
 	}
 
