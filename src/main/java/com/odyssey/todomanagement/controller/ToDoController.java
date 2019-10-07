@@ -47,33 +47,28 @@ public class ToDoController {
 	@Autowired
 	EmailService emailService;
 	
-	@RequestMapping("/")
-	@ResponseBody
-	public String getValues() {
-	     return "hello World";
-	}
 	
-	@RequestMapping("/nanan")
-	public String getHomePage(Model model) {
+	@RequestMapping("/")
+	public String getHomePage() {
 		
 		// Finding the working directory of java
 		
-		System.out.println(Paths.get("").toAbsolutePath().toString());
+		// System.out.println(Paths.get("").toAbsolutePath().toString());
 		
-		Period intervalPeriod;
+	//	Period intervalPeriod;
 		
-		List<Task> tasks = taskDao.findAll();
+	//	List<Task> tasks = taskDao.findAll();
 		
 		
-		Map<Period, Task> duration = new HashMap<>();
+		//Map<Period, Task> duration = new HashMap<>();
 		
-		for(Task t : tasks) {
-			intervalPeriod = Period.between(t.getDue_date(), LocalDate.now());
-			duration.put(intervalPeriod, t);
+		//for(Task t : tasks) {
+	//		intervalPeriod = Period.between(t.getDue_date(), LocalDate.now());
+	//		duration.put(intervalPeriod, t);
 			
 		}
-		
-		model.addAttribute("tasks",duration);
+	//	
+		//model.addAttribute("tasks",duration);
 		return "main";
 	}
 
