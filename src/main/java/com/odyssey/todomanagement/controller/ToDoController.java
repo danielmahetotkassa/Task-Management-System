@@ -47,8 +47,8 @@ public class ToDoController {
 	@Autowired
 	EmailService emailService;
 	
-	@GetMapping("/")
-	@ResponseBody
+	@RequestMapping("/")
+        @ResponseBody
 	public String getValues(){
 		
 		return "This is daniel";
