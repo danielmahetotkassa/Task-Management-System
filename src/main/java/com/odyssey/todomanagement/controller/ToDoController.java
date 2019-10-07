@@ -47,7 +47,13 @@ public class ToDoController {
 	@Autowired
 	EmailService emailService;
 	
-	@RequestMapping("/")
+	@GetMapping("/")
+	@ResponseBody
+	public String getValues(){
+		
+		return "This is daniel";
+	}
+	@RequestMapping("/nanan")
 	public String getHomePage(Model model) {
 		
 		// Finding the working directory of java
